@@ -1,0 +1,12 @@
+E:\Dapper\eCommerce\API\e.Domain\bin\Debug\net8.0\e.Domain.deps.json
+E:\Dapper\eCommerce\API\e.Domain\bin\Debug\net8.0\e.Domain.dll
+E:\Dapper\eCommerce\API\e.Domain\bin\Debug\net8.0\e.Domain.pdb
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.AssemblyInfoInputs.cache
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.AssemblyInfo.cs
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.csproj.CoreCompileInputs.cache
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.sourcelink.json
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.dll
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\refint\e.Domain.dll
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\e.Domain.pdb
+E:\Dapper\eCommerce\API\e.Domain\obj\Debug\net8.0\ref\e.Domain.dll

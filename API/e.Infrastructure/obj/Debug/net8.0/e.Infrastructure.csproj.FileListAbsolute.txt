@@ -1,0 +1,16 @@
+E:\Dapper\eCommerce\API\e.Infrastructure\bin\Debug\net8.0\e.Infrastructure.deps.json
+E:\Dapper\eCommerce\API\e.Infrastructure\bin\Debug\net8.0\e.Infrastructure.dll
+E:\Dapper\eCommerce\API\e.Infrastructure\bin\Debug\net8.0\e.Infrastructure.pdb
+E:\Dapper\eCommerce\API\e.Infrastructure\bin\Debug\net8.0\e.Domain.dll
+E:\Dapper\eCommerce\API\e.Infrastructure\bin\Debug\net8.0\e.Domain.pdb
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.csproj.AssemblyReference.cache
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.AssemblyInfoInputs.cache
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.AssemblyInfo.cs
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.sourcelink.json
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infras.0B89496D.Up2Date
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.dll
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\refint\e.Infrastructure.dll
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\e.Infrastructure.pdb
+E:\Dapper\eCommerce\API\e.Infrastructure\obj\Debug\net8.0\ref\e.Infrastructure.dll
