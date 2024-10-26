@@ -28,8 +28,8 @@ CREATE TABLE ENDERECOS_ENTREGA (
 	CD_USUARIO INTEGER NOT NULL,
 	NM_ENDERECO TEXT(100),
 	DS_CEP TEXT(10),
-	DS_CIDADE TEXT(120),
 	DS_ESTADO TEXT(2),
+	DS_CIDADE TEXT(120),
 	DS_BAIRRO TEXT(200),
 	DS_ENDERECO TEXT(200),
 	DS_NUMERO TEXT(20),
@@ -53,3 +53,141 @@ CREATE TABLE USUARIOS_DEPARTAMENTOS (
 	CONSTRAINT USUARIOS_DEPARTAMENTOS_USUARIOS_FK FOREIGN KEY (CD_USUARIO) REFERENCES USUARIOS(CD_USUARIO) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT USUARIOS_DEPARTAMENTOS_DEPARTAMENTOS_FK FOREIGN KEY (CD_DEPARTAMENTO) REFERENCES DEPARTAMENTOS(CD_DEPARTAMENTO) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+-- INSERTS
+INSERT INTO USUARIOS
+	(CD_USUARIO, NM_USUARIO, E_MAIL, TP_SEXO, NR_RG, NR_CPF, NM_MAE, DS_SITUACAO_CADASTRO, CREATED_AT)
+VALUES
+	(1, 'Ana Tereza de A. Vasques', 'ana.tereza@gmail.com', 'F', '2.523.322', '478.560.690-82', 'Maria Tereza de A. Vasques', 'A', '2021-01-01 00:00:00'),
+	(2, 'José Mariano Gomes', 'jose.mariano@gmail.com', 'M', '3.152.321', '604.986.340-78', 'Antônia Mariano Gomes', 'A', '2021-01-01 00:00:00'),
+	(3, 'Heitor Patricio da Silva', 'heitor.patricio@gmail.com', 'M', '5.545.644', '664.192.410-65', 'Joséfa Patricio da Silva', 'A', '2021-01-01 00:00:00'),
+	(4, 'Arthur Felipe R. Costa', 'arthur123@gmail.com', 'M', '5.412.148', '736.757.570-80', 'Simone Felipe R. Costa', 'A', '2021-01-01 00:00:00'),
+	(5, 'Elivelton Costa da Silva', 'elivelton.costa123@gmail.com', 'M', '3.654.115', '387.702.540-44', 'Maria Costa da Silva', 'A', '2021-01-01 00:00:00'),
+	(6, 'Debora Kaynara Patricio da Silva', 'debora.kaynara@gmail.com', 'F', '7.156.563', '119.894.260-69', 'Jéssica Kaynara Patricio da Silva', 'A', '2021-01-01 00:00:00'),
+	(7, 'Jéssica do Vale Soares', 'jessica.vale.soares@gmail.com', 'F', '6.488.448', '794.014.610-66', 'Gabriela do Vale Soares','A', '2021-01-01 00:00:00'),
+	(8, 'Irene Hamara da Costa Oliveira', 'irene.eumesmo@gmail.com', 'F', '5.584.621', '580.697.270-47', 'Irenilde Hamara da Costa Oliveira' ,'A', '2021-01-01 00:00:00'),
+	(9, 'Keline Pinheiro Araujo', 'kaline.123@gmail.com', 'F', '34.511.5', '317.257.250-10', 'Karia Pinheiro Araujo', 'A', '2021-01-01 00:00:00'),
+	(10, 'Larissi Araujo da Silva', 'larissi.araujo@gmail.com', 'F', '2.154.462', '146.581.080-38', 'Maria Araujo da Silva', 'A', '2021-01-01 00:00:00');
+
+SELECT 
+	CD_USUARIO, NM_USUARIO, E_MAIL, TP_SEXO, NR_RG, NR_CPF, NM_MAE, DS_SITUACAO_CADASTRO, CREATED_AT, UPDATE_AT
+FROM USUARIOS;
+
+--
+
+INSERT INTO CONTATOS
+	(CD_CONTATO, CD_USUARIO, NR_TELEFONE, NR_CELULAR)
+VALUES
+	(1, 1, '(75) 39543-4531', '(75) 91896-3914'),
+	(2, 2, '(74) 36604-1090', '(74) 90169-1967'),
+	(3, 3, '(33) 13613-6742', '(33) 99686-3342'),
+	(4, 4, '(82) 31979-3471', '(82) 95532-9781'),
+	(5, 5, '(40) 55656-5270', '(40) 99524-8943'),
+	(6, 6, '(35) 29148-1908', '(35) 97808-5100'),
+	(7, 7, '(36) 15250-6172', '(36) 93652-9746'),
+	(8, 8, '(33) 54543-6849', '(33) 90756-8017'),
+	(9, 9, '(43) 49019-5729', '(43) 98377-2284'),
+	(10, 10, '(38) 83710-6739', '(38) 98760-2494');
+
+SELECT 
+	CD_CONTATO, CD_USUARIO, NR_TELEFONE, NR_CELULAR
+FROM CONTATOS;
+
+--
+
+INSERT INTO ENDERECOS_ENTREGA
+	(CD_ENDERECOS_ENTREGA, CD_USUARIO, NM_ENDERECO, DS_CEP, DS_ESTADO, DS_CIDADE, DS_BAIRRO, DS_ENDERECO, DS_NUMERO, DS_COMPLEMENTO)
+VALUES
+	(1, 1, 'Casa', '49700-974', 'SE', 'Capela', 'Centro', 'Rua Principal, s/n', '12', 'Casa 12 - Verde'),
+	(2, 1, 'Trabalho', '49700-974', 'SE', 'Capela', 'Centro', 'Rua Principal, s/n', '10', 'Ed. Fulano - Sala 10'),
+	(3, 1, 'Casa da mãe', '49700-901', 'SE', 'Capela', 'Centro', 'Rua Principal, s/n', '1', 'Casa 1'),
+	(4, 1, 'Casa da irmã', '49700-501', 'SE', 'Capela', 'Centro', 'Rua 30, s/n', '29', 'Casa 30'),
+	(5, 2, 'Casa', '24370-216', 'RJ', 'Niterói', 'Jurujuba', 'Travessa José Bento', '1', 'Casa 1'),
+	(6, 2, 'Trabalho', '24370-220', 'RJ', 'Niterói', 'Jurujuba', 'Travessa José Bento', '30', 'Ed. Fulano - Sala 30'),
+	(7, 3, 'Casa', '63040-230', 'CE', 'Juazeiro do Norte', 'Lagoa Seca', 'Rua Severino Alves Sobrinho', '30', 'Casa 30'),
+	(8, 3, 'Trabalho', '63040-230', 'CE', 'Juazeiro do Norte', 'Lagoa Seca', 'Rua Severino Alves Sobrinho', '30', 'Ed. Fulano - Sala 30'),
+	(9, 4, 'Casa', '59607-265', 'RN', 'Mossoró', 'Aeroporto', 'Rua Francisco Pereira da Silva', '21', 'Casa 21'),
+	(10, 4, 'Trabalho', '59607-265', 'RN', 'Mossoró', 'Aeroporto', 'Rua Francisco Pereira da Silva', '11', 'Ed.Fulano - Sala 11'),
+	(11, 5, 'Casa', '79826-240', 'MS', 'Dourados', 'Cohafaba III Plano', 'Rua Manoel Santiago', '21', 'Casa 21'),
+	(12, 5, 'Trabalho', '79826-240', 'MS', 'Dourados', 'Cohafaba III Plano', 'Rua Manoel Santiago', '10', 'Ed.Fulano - Sala 19'),
+	(13, 6, 'Casa', '64012-825', 'PI', 'Teresina', 'Santa Maria da Codipe', 'Quadra N', '123', 'Casa 123'),
+	(14, 6, 'Trabalho', '64012-825', 'PI', 'Teresina', 'Santa Maria da Codipe', 'Quadra N', '251', 'Ed. Fulano - Sala 123'),
+	(15, 7, 'Casa', '60731-340', 'CE', 'Fortaleza', 'Canindezinho', 'Rua João Faustino Ribeiro', '14', 'Casa 14'),
+	(16, 7, 'Trabalho', '60731-340', 'CE', 'Fortaleza', 'Canindezinho', 'Rua João Faustino Ribeiro', '300', 'Ed. Fulano - Sala 300'),
+	(17, 8, 'Casa', '78156-202', 'MT', 'Várzea Grande', 'Jardim Manaíra', 'Rua Dois', '41', 'Casa 41'),
+	(18, 8, 'Trabalho', '78156-202', 'MT', 'Várzea Grande', 'Jardim Manaíra', 'Rua Dois', '13', 'Ed. Fulano - Sala 13'),
+	(19, 9, 'Casa', '68906-450', 'AP', 'Macapá', 'Marabaixo', 'Rua Beira Rio', '2', 'Casa 2'),
+	(20, 9, 'Trabalho', '68906-450', 'AP', 'Macapá', 'Marabaixo', 'Rua Beira Rio', '4', 'Ed.Fulano - Sala 4'),
+	(21, 10, 'Casa', '53425-560', 'PE', 'Paulista', 'Nossa Senhora da Conceição', 'Rua Belo Vale', '1', 'Apt 103'),
+	(22, 10, 'Casa', '53425-560', 'PE', 'Paulista', 'Nossa Senhora da Conceição', 'Rua Belo Vale', '1', 'Ed. Fulano - 103');
+
+SELECT 
+	CD_ENDERECOS_ENTREGA, CD_USUARIO, NM_ENDERECO, DS_CEP, DS_ESTADO, DS_CIDADE, DS_BAIRRO, DS_ENDERECO, DS_NUMERO, DS_COMPLEMENTO
+FROM ENDERECOS_ENTREGA;
+
+--
+
+INSERT INTO DEPARTAMENTOS
+	(CD_DEPARTAMENTO, NM_DEPARTAMENTO)
+VALUES
+	(1, 'Mercado'),
+	(2, 'Celulares'),
+	(3, 'Informática e Tablets'),
+	(4, 'Moda, beleza e perfumaria'),
+	(5, 'eletrodomêsticos e split'),
+	(7, 'TV, áudio e home theater'),
+	(8, 'Móveis e decoração'),
+	(9, 'Brinquedos e bebês'),
+	(10, 'Eletroportáteis'),
+	(11, 'Esporte e suplementos'),
+	(12, 'Games, livros e filmes'),
+	(13, 'Produtos importados'),
+	(14, 'Para sua empresa'),
+	(15, 'Cartão, parceiros e serviços');
+
+SELECT 
+	CD_DEPARTAMENTO, NM_DEPARTAMENTO
+FROM DEPARTAMENTOS;
+
+--
+
+INSERT INTO USUARIOS_DEPARTAMENTOS
+	(CD_USUARIO_DEPARTAMENTO, CD_USUARIO, CD_DEPARTAMENTO)
+VALUES
+	(1, 1, 1),
+	(2, 1, 2),
+	(3, 1, 3),
+	(4, 2, 4),
+	(5, 2, 5),
+	(6, 2, 6),
+	(7, 3, 7),
+	(8, 3, 8),
+	(9, 3, 9),
+	(10, 4, 10),
+	(11, 4, 11),
+	(12, 4, 12),
+	(13, 5, 13),
+	(14, 5, 14),
+	(15, 5, 1),
+	(16, 6, 2),
+	(17, 6, 3),
+	(18, 6, 4),
+	(19, 6, 5),
+	(20, 6, 6),
+	(21, 6, 7),
+	(22, 7, 8),
+	(23, 7, 9),
+	(24, 7, 10),
+	(25, 8, 8),
+	(26, 8, 9),
+	(27, 8, 10),
+	(29, 9, 11),
+	(30, 9, 12),
+	(31, 9, 13),
+	(32, 10, 14),
+	(33, 10, 1),
+	(34, 10, 2);
+
+SELECT 
+	CD_USUARIO_DEPARTAMENTO, CD_USUARIO, CD_DEPARTAMENTO
+FROM USUARIOS_DEPARTAMENTOS;
